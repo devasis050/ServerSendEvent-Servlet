@@ -18,7 +18,7 @@ public class NotificationServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		res.setContentType("text/event-stream");
 		AsyncContext actx = req.startAsync(req,res);
-		//Use the context to use it asynchronously. We may look into listener for better control./
+		//Use the context to use it asynchronously. We may look into listener for better control.
 		actx.setTimeout(10 * 1000);
 		
 		actx.getResponse().getWriter().println("First Response");
